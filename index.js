@@ -55,9 +55,6 @@ app.get('/og-image', async (req, res) => {
     res.end(convertedImage, 'binary')
 })
 
-// Serve the React app (assuming it's built and in the 'build' directory)
-app.use(express.static(path.join(__dirname, 'build')))
-
 app.get('*', (req, res) => {
     res.send('Server is running...')
 })
